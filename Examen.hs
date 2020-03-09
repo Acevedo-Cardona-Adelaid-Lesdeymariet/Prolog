@@ -1,4 +1,4 @@
-```JavaScript
+
 type NombreAlbum = String
 type Año = Int
 type NoCanciones = Int
@@ -46,4 +46,3 @@ fb ::
 -- Funcion de Guitarristas Inactivos
 
 -- Funcion de Integrantes Posteriores al 2000
-```
