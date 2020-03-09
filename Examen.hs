@@ -1,9 +1,12 @@
+-- Acevedo Cardona Adelaid Lesdeymariet [16211957]
 
+-- Atributos de Albumes
 type NombreAlbum = String
 type Año = Int
 type NoCanciones = Int
 type Duracion = String
 
+-- Atributos de Integrantes
 type NombreIntegrante = String
 type Instrumento = String
 type Edad = Int
@@ -39,10 +42,18 @@ fa lista n = [albumes | (nombrealbum, año, nocanciones, duracion) <- lista, nom
 
 -- Funcion de Bateristas 
 
-fb :: 
+fb :: Grupos -> Instrumento -> [Integrantes]
+fb lista n = [integrantes | (nombre, instrumento, edad, añoingreso, activo) <- lista, instrumento == n]
 
 -- Funcion por Genero 
 
+fg :: Grupos -> Genero -> [Grupo]
+fg lista n = [grupo | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, genero == n]
+
 -- Funcion de Guitarristas Inactivos
 
+fgi :: 
+
 -- Funcion de Integrantes Posteriores al 2000
+
+fip :: Grupos -> 
