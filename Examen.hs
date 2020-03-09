@@ -1,25 +1,23 @@
 -- Acevedo Cardona Adelaid Lesdeymariet [16211957]
 
 -- Atributos de Albumes
-
 type NombreAlbum = String
 type Año = Int
 type NoCanciones = Int
 type Duracion = String
 
 -- Atributos de Integrantes
-
 type NombreIntegrante = String
 type Instrumento = String
 type Edad = Int
 type AñoIngreso = Int
-type Activo = String
+type Status = String
 
 type NombreGrupo = String
 type Albumes = (NombreAlbum, Año, NoCanciones, Duracion)
 type AñoDebut = Int
 type Genero = String
-type Integrantes = (NombreIntegrante, Instrumento, Edad, AñoIngreso, Activo)
+type Integrantes = (NombreIntegrante, Instrumento, Edad, AñoIngreso, Status)
 type TourActual = String
 type CiudadesDelTour = [String]
 
@@ -34,8 +32,8 @@ fad lista n = [grupo | (nombregrupo,albumes,añodebut,genero,integrantes,touract
 
 -- Funcion de Integrantes Activos
 
-fia :: Grupos -> Activo -> [Integrantes]
-fia lista n = [integrantes | (nombre, instrumento, edad, añoingreso, activo) <- lista, activo == n]
+fia :: Grupos -> Status -> [Integrantes]
+fia lista n = [integrantes | (nombre, instrumento, edad, añoingreso, status) <- lista, status == n == "Activo"]
 
 -- Funcion de Album
 
@@ -45,7 +43,7 @@ fa lista n = [albumes | (nombrealbum, año, nocanciones, duracion) <- lista, nom
 -- Funcion de Bateristas 
 
 fb :: Grupos -> Instrumento -> [Integrantes]
-fb lista n = [integrantes | (nombre, instrumento, edad, añoingreso, activo) <- lista, instrumento == n]
+fb lista n = [integrantes | (nombre, instrumento, edad, añoingreso, status) <- lista, instrumento == n == "Bateria"]
 
 -- Funcion por Genero 
 
@@ -54,8 +52,10 @@ fg lista n = [grupo | (nombregrupo, albumes, añodebut, genero, integrantes, tou
 
 -- Funcion de Guitarristas Inactivos
 
-fgi :: 
+fgi :: Grupos -> Instrumento -> Activo -> [Integrantes]
+fgi lista n r = [integrantes | (nombre, instrumento, edad, añoingreso,status) <- lista, instrumento == n == "Guitarra" && status == r == "Inactivo"]
 
 -- Funcion de Integrantes Posteriores al 2000
 
-fip :: Grupos -> 
+fip :: Grupos -> AñoIngreso -> [Integrantes]
+fip lista n = [integrantes | (nombre, instrumento, edad, añoingreso, status) <- lista, añoingreso == n == "2000"]
