@@ -1,12 +1,14 @@
 -- Acevedo Cardona Adelaid Lesdeymariet [16211957]
 
 -- Atributos de Albumes
+
 type NombreAlbum = String
 type Año = Int
 type NoCanciones = Int
 type Duracion = String
 
 -- Atributos de Integrantes
+
 type NombreIntegrante = String
 type Instrumento = String
 type Edad = Int
