@@ -1,5 +1,15 @@
 -- Acevedo Cardona Adelaid Lesdeymariet [16211957]
 
+{- 
+
+Notas: 
+
+1.- La primera funcion de cada tipo devuelve todos los atributos relacionados con el registro evaluado, mientras que la segunda solo imprime el nombre.
+
+2.- Todos aquellos integrantes cuyo valor de edad es igual a 0 es porque se desconoce su edad.
+
+-}
+
 -- Atributos de Albumes
 type NombreAlbum = String
 type Año = Int
@@ -415,7 +425,7 @@ listas =
    ("Jerrod Bettis", "Bateria", 0, 2002, False),
    ("Timothy Myers", "Bajo", 35, 2002, False)
   ],
-   "Ningun Tour Disponible",
+   "Ningun Tour Actual",
   [
   ""
   ]
@@ -428,36 +438,57 @@ fgr lista n = [(nombregrupo, albumes, añodebut, genero, integrantes, touractual
 
 -- Funcion por Año de Debut
 
-fad :: Grupos -> AñoDebut -> [Grupo]
-fad lista n = [(nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, añodebut == n]
+fad1 :: Grupos -> AñoDebut -> [Grupo]
+fad1 lista n = [(nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, añodebut == n]
+
+fad2 :: Grupos -> AñoDebut -> [NombreGrupo]
+fad2 lista n = [nombregrupo | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, añodebut == n]
 
 -- Funcion de Integrantes Activos 
 
-fia :: Grupos -> Integrantes
-fia lista = [(nombreintegrante, instrumentos, edad, añoingreso, status) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, status == True]
+fia1 :: Grupos -> Integrantes
+fia1 lista = [(nombreintegrante, instrumentos, edad, añoingreso, status) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, status == True]
+
+fia2 :: Grupos -> [NombreIntegrante]
+fia2 lista = [nombreintegrante | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, status == True]
 
 -- Funcion de Albumes 
 
-fa :: Grupos -> NombreAlbum -> [Grupo]
-fa lista n = [(nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista , (nombrealbum, año, nocanciones, duracion) <- albumes, nombrealbum == n]
+fa1 :: Grupos -> NombreAlbum -> [Grupo]
+fa1 lista n = [(nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista , (nombrealbum, año, nocanciones, duracion) <- albumes, nombrealbum == n]
+
+fa2 :: Grupos -> NombreAlbum -> [NombreGrupo]
+fa2 lista n = [nombregrupo | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista , (nombrealbum, año, nocanciones, duracion) <- albumes, nombrealbum == n]
 
 -- Funcion de Bateristas 
 
-fb :: Grupos -> Integrantes
-fb lista = [(nombreintegrante, instrumentos, edad, añoingreso, status) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, instrumentos == "Bateria"]
+fb1 :: Grupos -> Integrantes
+fb1 lista = [(nombreintegrante, instrumentos, edad, añoingreso, status) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, instrumentos == "Bateria"]
 
--- Funcion por Genero →
+fb2 :: Grupos -> [NombreIntegrante]
+fb2 lista = [nombreintegrante | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, instrumentos == "Bateria"]
 
-fg :: Grupos -> Genero -> [Grupo]
-fg lista n = [(nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, genero == n]
+-- Funcion por Genero 
 
--- Funcion de Guitarristas Inactivos →
+fg1 :: Grupos -> Genero -> [Grupo]
+fg1 lista n = [(nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, genero == n]
 
-fgi :: Grupos -> Integrantes
-fgi lista = [(nombreintegrante, instrumentos, edad, añoingreso, status) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, instrumentos == "Guitarra" && status == False]
+fg2 :: Grupos -> Genero -> [NombreGrupo]
+fg2 lista n = [nombregrupo | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, genero == n]
+
+-- Funcion de Guitarristas Inactivos 
+
+fgi1 :: Grupos -> Integrantes
+fgi1 lista = [(nombreintegrante, instrumentos, edad, añoingreso, status) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, instrumentos == "Guitarra" && status == False]
+
+fgi2 :: Grupos -> [NombreIntegrante]
+fgi2 lista = [nombreintegrante | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, instrumentos == "Guitarra" && status == False] 
 
 -- Funcion de Integrantes Posteriores al año 2000
 
-fip :: Grupos -> Integrantes
-fip lista = [(nombreintegrante, instrumentos, edad, añoingreso, status) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, añoingreso > 2000]
+fip1 :: Grupos -> Integrantes
+fip1 lista = [(nombreintegrante, instrumentos, edad, añoingreso, status) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, añoingreso > 2000]
+
+fip2 :: Grupos -> [NombreIntegrante]
+fip2 lista = [nombreintegrante | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, añoingreso > 2000]
 
