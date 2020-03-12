@@ -398,24 +398,26 @@ listas =
   (
    "OneRepublic",
   [
-   ("Stuck In The Sound",2004,10,"58:80 min"),
-   ("Nevermind the Living Dead",2006,13,"56:38 min"),
-   ("Shoegazing Kids",2009,12,"45:16 min"),
-   ("Pursuit",2012,14,"49:05 min"),
-   ("Survivor",2016,11,"42:41 min"),
-   ("Billy Believe",2019,12,"44:38 min")
+   ("Dreaming Out Loud",2007,13,"57:25 min"),
+   ("Waking Up",2009,11,"47:28 min"),
+   ("Native",2013,12,"46:44 min"),
+   ("Oh My My",2016,16,"60:26 min")
   ],
    2002,
-   "Rock Indie",
+   "Pop Rock",
   [
-   ("José Reis Fontão","Voz",0,2002,True),
-   ("Emmanuel Barichasse","Guitarra",0,2002,True),
-   ("Arno Bordas","Bajo",0,2002,True),
-   ("François Ernie","Bateria",0,2002,True),
-   ("Romain Della Valle","Piano",0,2012,True)
+   ("Ryan Benjamin Tedder","Voz",40,2002,True),
+   ("Zachary Douglas Filkins","Guitarra",41,2002,True),
+   ("Andrew John Brown","Piano",36,2002,True),
+   ("Eddie Ray Fisher","Bateria",46,2005,True),
+   ("Brent Michael Kutzle","Bajo",34,2007,True),
+   ("Brian Willett","Teclado",48,2012,True),
+   ("Jerrod Bettis", "Bateria", 0, 2002, False),
+   ("Timothy Myers", "Bajo", 35, 2002, False)
   ],
    "Ningun Tour Disponible",
   [
+  ""
   ]
   )
   ]
@@ -459,13 +461,3 @@ fgi lista = [(nombreintegrante, instrumentos, edad, añoingreso, status) | (nomb
 fip :: Grupos -> Integrantes
 fip lista = [(nombreintegrante, instrumentos, edad, añoingreso, status) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, añoingreso > 2000]
 
-
-{- Links:
-   https://es.wikipedia.org/wiki/Horde_(banda)
-   https://es.wikipedia.org/wiki/Homeshake
-   https://es.wikipedia.org/wiki/Burzum
-   https://es.wikipedia.org/wiki/Seltzer_(banda)
-   https://en.wikipedia.org/wiki/Sleep_Party_People
-   https://es.wikipedia.org/wiki/City_and_Colour
-   https://es.wikipedia.org/wiki/Aries_(banda)
-   -}
