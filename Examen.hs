@@ -426,22 +426,22 @@ listas =
 fgr :: Grupos -> NombreGrupo -> [Grupo]
 fgr lista n = [(nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, nombregrupo == n]
 
--- Funcion por Año de Debut → Devuelve los Grupos Musicales que Debutaron en el Mismo Año
+-- Funcion por Año de Debut
 
 fad :: Grupos -> AñoDebut -> [Grupo]
 fad lista n = [(nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, añodebut == n]
 
--- Funcion de Integrantes Activos → Devuelve la informacion de los Integrantes
+-- Funcion de Integrantes Activos 
 
 fia :: Grupos -> Integrantes
 fia lista = [(nombreintegrante, instrumentos, edad, añoingreso, status) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, status == True]
 
--- Funcion de Albumes → Devuelve la informacion del Grupo Musical 
+-- Funcion de Albumes 
 
 fa :: Grupos -> NombreAlbum -> [Grupo]
 fa lista n = [(nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista , (nombrealbum, año, nocanciones, duracion) <- albumes, nombrealbum == n]
 
--- Funcion de Bateristas → Devuelve la informacion de los Integrantes
+-- Funcion de Bateristas 
 
 fb :: Grupos -> Integrantes
 fb lista = [(nombreintegrante, instrumentos, edad, añoingreso, status) | (nombregrupo, albumes, añodebut, genero, integrantes, touractual, ciudadesdeltour) <- lista, (nombreintegrante, instrumentos, edad, añoingreso, status) <- integrantes, instrumentos == "Bateria"]
