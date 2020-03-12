@@ -195,9 +195,9 @@ listas =
   2012, 
   "Reggae", 
   [
-  ("Nasri Tony Atweh","Vocalista",39,2012,True)
-  ("Mark Pellizzer","Guitarra",39,2012,True)
-  ("Ben Spivak","Bajo",37,2012,True)
+  ("Nasri Tony Atweh","Vocalista",39,2012,True),
+  ("Mark Pellizzer","Guitarra",39,2012,True),
+  ("Ben Spivak","Bajo",37,2012,True),
   ("Alexander Tanasijczuk","Bateria",34,2012,True)
   ],
   "Ningun Tour Actual",
@@ -240,7 +240,7 @@ listas =
   2008,
   "Pop Rock",
   [
-	("Dan Reynolds","Voz",32,2008,True),
+  ("Dan Reynolds","Voz",32,2008,True),
   ("Ben McKee","Bajo",31,2009,True),
   ("Daniel Wayne Sermon","Mandolina",33,2009,True),
   ("Daniel Platzman","Viola",31,2011,True),
@@ -249,8 +249,8 @@ listas =
   ("Theresa Flaminio","Piano",33,2011,False),
   ("Dave Lemke","Bajo",32,2008,False),
   ("Aurora Florence","Violin",33,2008,False),
-	("Andrew Beck","Guitarra",33,2008,False)
-	],
+  ("Andrew Beck","Guitarra",33,2008,False)
+  ],
   "Ningun Tour Actual",
   []),
 
@@ -267,9 +267,9 @@ listas =
   ("Resist",2019,10,"47:35 min")
   ],
   1996,
-  "	Metal Sinfónico",
-	[
-	("Sharon den Adel","Voz",45,1996,True),
+  "Metal Sinfónico",
+  [
+  ("Sharon den Adel","Voz",45,1996,True),
   ("Robert Westerholt","Guitarra",45,1996,True),
   ("Jeroen van Veen","Bajo",45,1996,True),
   ("Rudolf Adrianus Jolie","Guitarra",43,2001,True),
@@ -278,18 +278,54 @@ listas =
   ("Stefan Helleblade","Guitarra",41,2011,True),
   ("Stephen van Haestregt","Bateria",47,2001,False),
   ("Ciro Palma","Bateria",0,1998,False),
-	("David Martijn Westerholt","Teclado",40,1996,False),
+  ("David Martijn Westerholt","Teclado",40,1996,False),
   ("Ivar de Graaf", "Bateria", 46, 1996,False),
   ("Michiel Papenhove", "Guitarra", 44, 1996, False),
   ("Jelle Bakker", "Guitarra", 33, 2001, False),
   ("Dennis Leeflang", "Bateria", 40, 1996, False),
   ("Richard Willemse", "Bateria", 0, 1996, False)
-	],
+  ],
   "Worlds Collide Tour",
   [
   "Bruselas (Belgica)","Paris (Francia)", "Londres (Reino Unido)","Berlin (Alemania)", "Fráncfort (Alemania)", "Zúrich (Suiza)","Milán (Italia)", "Múnich (Alemania)", "Hamburgo (Alemania)", "Leipzig (Alemania)", "Düsseldorf (Alemania)", "Ámsterdan (Paises Bajos)"
   ]
-  ) 
+  ),
+
+
+
+-----------
+  ("Trading Yesterday",
+  [
+  ("Speak to Me",2008,5,"19:23 min"),
+  ("Imagine Dragons",2009,5,"20:20 min"),
+  ("Hell and Silence",2010,5,"17:50 min"),
+  ("It's Time",2011,8,"32:01 min"),
+  ("Continued Silence",2012,6,"19:25 min"),
+  ("Nigth Visions",2012,11,"40:10 min"),
+  ("Smoke + Mirrors",2015,13,"50:55 min"),
+  ("Evole",2017,11,"40:12 min"),
+  ("Origins",2018,12,"40:02 min")
+  ],
+  2008,
+  "Rock Alternativo",
+  [
+  ("Dan Reynolds","Voz",32,2008,True),
+  ("Ben McKee","Bajo",31,2009,True),
+  ("Daniel Wayne Sermon","Mandolina",33,2009,True),
+  ("Daniel Platzman","Viola",31,2011,True),
+  ("Andrew Tolman","Bateria",32,2008,False),
+  ("Brittany Tolman","Guitarra",34,2009,False),
+  ("Theresa Flaminio","Piano",33,2011,False),
+  ("Dave Lemke","Bajo",32,2008,False),
+  ("Aurora Florence","Violin",33,2008,False),
+  ("Andrew Beck","Guitarra",33,2008,False)
+  ],
+  "Ningun Tour Actual",
+  [])
+
+
+
+
   ]
 
 
