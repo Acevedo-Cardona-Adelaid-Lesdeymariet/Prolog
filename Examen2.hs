@@ -148,8 +148,9 @@ listas =
   [
    ("Dallas Green", "Guitarra" , 39, 2004, True)
   ],
-   "Ningun Tour Actual",
+   "City and Colour Tour 2020",
   [
+   "Santiago (Chile)", "Sao Paulo (Brasil)", "Porto Alegre (Brasil)", "Rio de Janeiro (Brasil)", "Adelaida (Australia)", "Fremantle (Australia)", "Sydney (Australia)", "Brisbane (Australia)", "Melbourne (Australia)", "Hobart (Australia)", "Pittsburgh (Pensilvania)", "Baltimore, Maryland (Estados Unidos)", "Red Bank, Nueva Jersey (Estados Unidos)", "Filadelfia, Pensilvania (Estados Unidos)", "Kingston, Nueva York (Estados Unidos)", "New Haven, Connecticut (Estados Unidos)", "Northampton, Massachusetts (Estados Unidos)", "Portland, Maine (Estados Unidos)", "Montreal, Quebec (Canada)", "Ithaca, Nueva York (Estados Unidos)", "Niagara Falls, Nueva York (Estados Unidos)", "Toronto, Ontario (Canada)"
   ]
   ),
 
@@ -182,7 +183,7 @@ listas =
   ],
    "Worlds Collide Tour",
   [
-   "Bruselas (Belgica)","Paris (Francia)", "Londres (Reino Unido)","Berlin (Alemania)", "Fráncfort (Alemania)", "Zúrich (Suiza)","Milán (Italia)", "Múnich (Alemania)", "Hamburgo (Alemania)", "Leipzig (Alemania)", "Düsseldorf (Alemania)", "Ámsterdan (Paises Bajos)"
+   "Bruselas (Belgica)","Paris (Francia)", "Londres (Reino Unido)","Berlin (Alemania)", "Fráncfort (Alemania)", "Zúrich (Suiza)","Milán (Italia)", "Múnich (Alemania)", "Hamburgo (Alemania)", "Leipzig (Alemania)", "Düsseldorf (Alemania)", "Ámsterdam (Paises Bajos)"
   ]
   ),
 
@@ -324,7 +325,7 @@ listas =
   ],
    "Worlds Collide Tour",
   [
-   "Bruselas (Belgica)","Paris (Francia)", "Londres (Reino Unido)","Berlin (Alemania)", "Fráncfort (Alemania)", "Zúrich (Suiza)","Milán (Italia)", "Múnich (Alemania)", "Hamburgo (Alemania)", "Leipzig (Alemania)", "Düsseldorf (Alemania)", "Ámsterdan (Paises Bajos)"
+   "Bruselas (Belgica)","Paris (Francia)", "Londres (Reino Unido)","Berlin (Alemania)", "Fráncfort (Alemania)", "Zúrich (Suiza)","Milán (Italia)", "Múnich (Alemania)", "Hamburgo (Alemania)", "Leipzig (Alemania)", "Düsseldorf (Alemania)", "Ámsterdam (Paises Bajos)"
   ]
   ),
 
@@ -427,7 +428,7 @@ listas =
   ],
    "Ningun Tour Actual",
   [
-  ""
+   "Notre Dame, Indiana (Estados Unidos)", "Shekvetili (Georgia)", "Glasgow (Reino Unido)", "Manchester (Reino Unido)", "Londres (Reino Unido)", "Bruselas (Belgica)", "Munich (Alemania)", "Amsterdam (Paises Bajos)", "Paris (Francia)", "Stuttgart (Alemania)", "Hamburgo (Alemania)", "Dusseldorf (Alemania)", "Zurich (Suiza)", "Padua (Italia)", "Milan (Italia)", "Madrid (España)", "Viena (Austria)", "Praga (Republica Checa)", "Liubliana (Eslovenia)", "Bratislava (Eslovaquia)", "Varsovia (Polonia)", "Riga (Letonia)", "Kaunas (Lituania)", "Tallin (Estonia)", "San Petersburgo (Rusia)", "Moscu (Rusia)"
   ]
   )
   ]
