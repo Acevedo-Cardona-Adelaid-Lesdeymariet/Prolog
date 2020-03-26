@@ -1,4 +1,3 @@
-```c++
 int LED = 13 ; 
 int sensor = 6 ;
 bool estado = false ;
@@ -20,4 +19,3 @@ void loop()
     delay (1000);
   }
 }
-```
